@@ -1,0 +1,132 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+body {
+  background-color: #0b5990;
+  font-family: "Exo 2", sans-serif;
+}
+.container {
+  background-color: white;
+  margin: auto;
+  width: 30%;
+  padding: 10px;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-height: 120vh; /* Adjust as needed */
+  overflow-y: auto; /* Add scroll if content exceeds container height */
+  border-radius: 5px;
+  text-align: center;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.fa.fa-quote-left {
+  margin: 10px;
+  padding: 10px;
+}
+#author {
+  padding: 10px;
+  margin-top: 20px;
+}
+
+#btn {
+  padding: 10px;
+  border-radius: 100px;
+  width: 20%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  background-color: #0b5990;
+  color: aliceblue;
+  float: right;
+  margin-right: 10px;
+}
+
+#speakButton {
+  padding: 8px;
+  border-radius: 10px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  background-color: #0b5990;
+  color: aliceblue;
+  margin-left: 10px;
+}
+#copyButton {
+  margin-right: 250px;
+  background-color: #0b5990;
+  color: aliceblue;
+  padding: 8px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+#left {
+  margin-right: 90%;
+  padding: 10px;
+}
+#right {
+  margin-left: 90%;
+  padding: 10px;
+}
+
+.loader {
+  width: 60px;
+  aspect-ratio: 1;
+  display: grid;
+  grid: 50%/50%;
+  color: #ffa516;
+  border-radius: 50%;
+  --_g: no-repeat linear-gradient(currentColor 0 0);
+  background: var(--_g), var(--_g), var(--_g);
+  background-size: 50.1% 50.1%;
+  animation: l9-0 1.5s infinite steps(1) alternate,
+    l9-0-0 3s infinite steps(1) alternate;
+  margin-left: 45%;
+  margin-top: 10px;
+}
+.loader::before {
+  content: "";
+  background: currentColor;
+  border-top-left-radius: 100px;
+  transform: perspective(150px) rotateY(0deg) rotateX(0deg);
+  transform-origin: bottom right;
+  animation: l9-1 1.5s infinite linear alternate;
+}
+@keyframes l9-0 {
+  0% {
+    background-position: 0 100%, 100% 100%, 100% 0;
+  }
+  33% {
+    background-position: 100% 100%, 100% 100%, 100% 0;
+  }
+  66% {
+    background-position: 100% 0, 100% 0, 100% 0;
+  }
+}
+@keyframes l9-0-0 {
+  0% {
+    transform: scaleX(1) rotate(0deg);
+  }
+  50% {
+    transform: scaleX(-1) rotate(-90deg);
+  }
+}
+@keyframes l9-1 {
+  16.5% {
+    transform: perspective(150px) rotateX(-90deg) rotateY(0deg) rotateX(0deg);
+    filter: grayscale(0.8);
+  }
+  33% {
+    transform: perspective(150px) rotateX(-180deg) rotateY(0deg) rotateX(0deg);
+  }
+  66% {
+    transform: perspective(150px) rotateX(-180deg) rotateY(-180deg)
+      rotateX(0deg);
+  }
+  100% {
+    transform: perspective(150px) rotateX(-180deg) rotateY(-180deg)
+      rotateX(-180deg);
+    filter: grayscale(0.8);
+  }
+}
