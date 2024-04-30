@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rock-Paper-Scissor</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lugrasimo&display=swap"
+      rel="stylesheet"
+    />
+    
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js""></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Rock Paper Scissor</h1>
+      <div>
+      <button id="reset">Reset</button>
+      
+    </div>
+    </header>
+    <div class="container">
+      <div class="buttons">
+        <button id="rock" class="each" value="rock"></button>
+        <button id="paper" class="each" value="paper"></button>
+        <button id="scissor" class="each" value="scissor"></button>
+      </div>
+      <div class="scores">
+        <div class="y">
+          <span id="you">0</span>
+          <label for="You">You</label>
+        </div>
+        <div class="y">
+          <span id="computer">0</span> <label for="Computer">Computer</label>
+        </div>
+      </div>
+
+      <div class="result">
+        <span id="result">Pick Your Move....</span>
+      </div>
+      
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>

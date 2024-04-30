@@ -1,0 +1,228 @@
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+body {
+  background-color: #8697c4;
+  font-family: "Lugrasimo", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+header {
+  background-color: #1a1a1a;
+  color: white;
+  height: 80px;
+  text-align: center;
+  padding: 20px;
+  font-size: 28px;
+}
+#reset {
+  position: absolute;
+  right: 10%;
+  top: 5%;
+  padding: 10px;
+  background-color: #e86969;
+  border-radius: 10px;
+  cursor: pointer;
+}
+#reset:hover {
+  background-color: #ca8787;
+}
+.container {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+
+  height: auto;
+}
+.buttons {
+  padding: 20px;
+  margin: 20px;
+  height: 200px;
+}
+.each {
+  margin: 20px;
+  width: 120px;
+  height: 120px;
+  padding: 0;
+  border-radius: 50%;
+  cursor: pointer;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: center;
+  overflow: hidden;
+}
+
+#rock {
+  background-image: url("rock.png");
+  background-size: cover;
+}
+
+#paper {
+  background-image: url("paper.png");
+  background-size: cover;
+}
+
+#scissor {
+  background-image: url("scissor.png");
+  background-size: cover;
+}
+
+.each:hover {
+  transform: scale(1.1);
+}
+
+#rock:hover {
+  background-color: #c21807;
+  border-color: #c21807;
+}
+
+#paper:hover {
+  background-color: #2979ff;
+  border-color: #2979ff;
+}
+
+#scissor:hover {
+  background-color: #ff6d00;
+  border-color: #ff6d00;
+}
+
+.scores {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  text-align: center;
+  font-size: 24px;
+}
+.y {
+  width: 100px;
+  height: 80px;
+  margin: 20px;
+  padding: 20px;
+}
+span {
+  width: 50px;
+  text-align: center;
+}
+#pick {
+  width: 200px;
+  margin: 20px;
+  padding: 10px;
+  border-radius: 8px;
+  outline: none;
+  border: none;
+  background-color: #ca8787;
+}
+#pick:hover {
+  background-color: #d67474;
+  cursor: pointer;
+}
+
+.result {
+  padding: 20px;
+  margin-top: 40px;
+  font-size: 18px;
+  background-color: #f0f0f0;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: inline-block;
+  white-space: nowrap;
+  width: auto;
+}
+
+.result span {
+  display: inline-block;
+}
+
+@media only screen and (max-width: 600px) {
+  header {
+    font-size: 20px;
+  }
+  .container {
+    grid-template-columns: 1fr;
+    padding: 10px;
+  }
+  .buttons {
+    grid-template-columns: repeat(3, 1fr);
+    height: auto;
+  }
+  .each {
+    width: 80px;
+    height: 80px;
+    padding: 20px;
+  }
+  .scores {
+    font-size: 16px;
+  }
+  .y {
+    margin: 10px;
+    padding: 10px;
+  }
+  span {
+    width: auto;
+  }
+  .result {
+    font-size: 18px;
+  }
+}
+
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+  header {
+    font-size: 24px;
+  }
+  .container {
+    padding: 20px;
+  }
+  .buttons {
+    grid-template-columns: repeat(3, 1fr);
+    height: auto;
+  }
+  .each {
+    width: 100px;
+    height: 100px;
+    padding: 25px;
+  }
+  .scores {
+    font-size: 20px;
+  }
+  .y {
+    margin: 15px;
+    padding: 15px;
+  }
+  span {
+    width: auto;
+  }
+  .result {
+    font-size: 22px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .container {
+    grid-template-columns: 1fr;
+  }
+
+  .buttons {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin: 20px;
+  }
+
+  .each {
+    width: 80px;
+    height: 80px;
+    padding: 20px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  header {
+    font-size: 24px;
+  }
+
+  .result {
+    font-size: 18px;
+  }
+}
