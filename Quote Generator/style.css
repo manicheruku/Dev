@@ -130,3 +130,40 @@ body {
     filter: grayscale(0.8);
   }
 }
+
+.container {
+  width: 30%;
+}
+
+
+@media screen and (max-width: 1024px) {
+  .container {
+    width: 60%;
+  }
+}
+
+
+@media screen and (max-width: 768px) {
+  .container {
+    width: 90%;
+  }
+
+ 
+  #btn,
+  #speakButton,
+  #copyButton {
+    width: 40%;
+  }
+
+  
+  #left {
+    margin-right: 10px;
+  }
+  #right {
+    margin-left: 10px;
+  }
+  #copyButton {
+    margin-right: 10px;
+  }
+}
+
